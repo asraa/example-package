@@ -170,13 +170,9 @@ verify_provenance_content() {
         DIR="$DIR/$GO_DIR"
     fi
 
-<<<<<<< HEAD:.github/workflows/scripts/e2e-verify.sh
-    echo "  **** Provenance content verification *****"
-=======
     # Verify all common provenance fields.
     e2e_verify_common_all "$ATTESTATION"
 
->>>>>>> 365bc87 (Combine common checks and add generic tag test):.github/workflows/scripts/e2e.go.default.verify.sh
     e2e_verify_predicate_subject_name "$ATTESTATION" "$BINARY"
     e2e_verify_predicate_builder_id "$ATTESTATION" "https://github.com/slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@refs/heads/main"
     e2e_verify_predicate_buildType "$ATTESTATION" "https://github.com/slsa-framework/slsa-github-generator/go@v1"
